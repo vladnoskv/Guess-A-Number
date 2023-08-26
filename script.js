@@ -79,27 +79,30 @@ function myGameLogic() {
     startGame();
   }
 
-  function addGuessToList(guess) {
-    const guessItem = document.createElement("li");
-    guessItem.textContent = guess;
+function addGuessToList(guess) {
+  const guessItem = document.createElement("li");
+  guessItem.textContent = guess;
 
-    const arrow = document.createElement("span");
-    arrow.classList.add("arrow");
+  const arrow = document.createElement("span");
+  arrow.classList.add("arrow");
 
-    if (guess < secretNumber) {
-      guessItem.classList.add("higher");
-      arrow.textContent = "⬆️"; // Up arrow
-    } else if (guess > secretNumber) {
-      guessItem.classList.add("lower");
-      arrow.textContent = "⬇️"; // Down arrow
-    } else {
-      arrow.textContent = "✔️"; // Display a checkmark when the final number is guessed
-    }
-
-    guessItem.appendChild(arrow);
-    guessList.insertBefore(guessItem, guessList.firstChild);
-    guessList.style.textAlign = "center";
+  if (guess < secretNumber) {
+    guessItem.classList.add("higher");
+    arrow.innerHTML = "&#8593;"; // Up arrow
+  } else if (guess > secretNumber) {
+    guessItem.classList.add("lower");
+    arrow.innerHTML = " &#8595;"; // Down arrow
+  } else {
+    arrow.innerHTML = " &#10004;"; // Display a checkmark when the final number is guessed
   }
+
+  arrow.style.color = " #262626"; // Set the color of the arrow to #262626
+  arrow.style.borderWidth = "2px"; // Set the thickness of the arrow's border to 2px
+
+  guessItem.appendChild(arrow);
+  guessList.insertBefore(guessItem, guessList.firstChild);
+  guessList.style.textAlign = "center";
+}
 
   function disableInputs() {
     userGuessInput.disabled = true;
