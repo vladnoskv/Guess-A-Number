@@ -46,7 +46,7 @@ function myGameLogic() {
         disableInputs();
       } else if (userGuess < secretNumber) {
         gameMessage.textContent = "Try a higher number.";
-        gameMessage.style.color = "black";
+        gameMessage.style.color = "green";
       } else {
         gameMessage.textContent = "Try a lower number.";
         gameMessage.style.color = "red";
@@ -55,17 +55,12 @@ function myGameLogic() {
       attemptsSpan.textContent = attempts;
       guessedNumbers.push(userGuess);
       addGuessToList(userGuess);
+      userGuessInput.value = ""; // Clear the guess input box
     }
   }
 
   function validateInput() {
     userGuessInput.value = userGuessInput.value.replace(/\D/g, "");
-  }
-
-  function checkGuessOnEnter(event) {
-    if (event.key === "Enter") {
-      checkGuess();
-    }
   }
 
   function restartGame() {
@@ -75,34 +70,34 @@ function myGameLogic() {
     enableInputs();
     guessList.textContent = "";
     attemptsSpan.textContent = attempts;
-    userGuessInput.value = "";
+    userGuessInput.value = ""; // Clear the guess input box
     startGame();
   }
 
-function addGuessToList(guess) {
-  const guessItem = document.createElement("li");
-  guessItem.textContent = guess;
+  function addGuessToList(guess) {
+    const guessItem = document.createElement("li");
+    guessItem.textContent = guess;
 
-  const arrow = document.createElement("span");
-  arrow.classList.add("arrow");
+    const arrow = document.createElement("span");
+    arrow.classList.add("arrow");
 
-  if (guess < secretNumber) {
-    guessItem.classList.add("higher");
-    arrow.innerHTML = "&#8593;"; // Up arrow
-  } else if (guess > secretNumber) {
-    guessItem.classList.add("lower");
-    arrow.innerHTML = " &#8595;"; // Down arrow
-  } else {
-    arrow.innerHTML = " &#10004;"; // Display a checkmark when the final number is guessed
+    if (guess < secretNumber) {
+      guessItem.classList.add("higher");
+      arrow.innerHTML = " &#8593;"; // Up arrow
+    } else if (guess > secretNumber) {
+      guessItem.classList.add("lower");
+      arrow.innerHTML = " &#8595;"; // Down arrow
+    } else {
+      arrow.innerHTML = " &#10004;"; // Display a checkmark when the final number is guessed
+    }
+
+    arrow.style.color = "#29274c;"; // Set the color of the arrow to #29274c
+    arrow.style.borderWidth = "2px"; // Set the thickness of the arrow's border to 2px
+
+    guessItem.appendChild(arrow);
+    guessList.insertBefore(guessItem, guessList.firstChild);
+    guessList.style.textAlign = "center";
   }
-
-  arrow.style.color = " #262626"; // Set the color of the arrow to #262626
-  arrow.style.borderWidth = "2px"; // Set the thickness of the arrow's border to 2px
-
-  guessItem.appendChild(arrow);
-  guessList.insertBefore(guessItem, guessList.firstChild);
-  guessList.style.textAlign = "center";
-}
 
   function disableInputs() {
     userGuessInput.disabled = true;
