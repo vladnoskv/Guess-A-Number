@@ -1,0 +1,79 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+  }
+  
+  .container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+
+  h1 {
+    color: #333;
+    margin-top: 0;
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  p#message {
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  p {
+    margin-bottom: 5px;
+  }
+  
+  .guesses {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+  }
+  
+  li {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    background-color: #eaeaea;
+    border-radius: 15px;
+    padding: 5px 10px;
+    margin-right: 10px;
+  }
+  
