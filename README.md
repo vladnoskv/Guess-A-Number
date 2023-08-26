@@ -65,4 +65,4 @@ This is a simple web-based game where the player has to guess a secret number be
 Enjoy playing the Guess the Number Game!
 
 Created by Vlad Noskov - 2023 All Rights Reserved,
-Open to Public Use for Personal Projects. Not for Commercial Use.
+GNU General Public License v3.0
