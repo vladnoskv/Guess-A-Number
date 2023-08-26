@@ -5,14 +5,21 @@ function myGameLogic() {
     const guessList = document.querySelector("#guessList");
     const attemptsSpan = document.querySelector("#attempts");
     const restartBtn = document.querySelector("#restartBtn");
-    
 
-    const secretNumber = Math.floor(Math.random() * 100) + 1;
-    let attempts = 0;
     const maxAttempts = 10;
-    const guessedNumbers = [];
+    let secretNumber, attempts, guessedNumbers;
 
-    checkGuessBtn.addEventListener("click", function() {
+    function startGame() {
+        secretNumber = Math.floor(Math.random() * 100) + 1;
+        attempts = 0;
+        guessedNumbers = [];
+
+        checkGuessBtn.addEventListener("click", checkGuess);
+        userGuessInput.addEventListener("keydown", checkGuessOnEnter);
+        restartBtn.addEventListener("click", restartGame);
+    }
+
+    function checkGuess() {
         const userGuess = parseInt(userGuessInput.value);
 
         if (isNaN(userGuess) || userGuess < 1 || userGuess > 100) {
@@ -25,15 +32,11 @@ function myGameLogic() {
             if (userGuess === secretNumber) {
                 gameMessage.textContent = `Congratulations! You guessed the number ${secretNumber} in ${attempts} attempts.`;
                 gameMessage.style.color = 'green';
-                userGuessInput.disabled = true;
-                checkGuessBtn.disabled = true;
-                restartBtn.disabled = false; // Enable restart button
+                disableInputs();
             } else if (attempts === maxAttempts) {
                 gameMessage.textContent = `Game over! The secret number was ${secretNumber}.`;
                 gameMessage.style.color = 'red';
-                userGuessInput.disabled = true;
-                checkGuessBtn.disabled = true;
-                restartBtn.disabled = false; // Enable restart button
+                disableInputs();
             } else if (userGuess < secretNumber) {
                 gameMessage.textContent = 'Try a higher number.';
                 gameMessage.style.color = 'black';
@@ -46,27 +49,23 @@ function myGameLogic() {
             guessedNumbers.push(userGuess);
             addGuessToList(userGuess);
         }
-    });
+    }
 
-    userGuessInput.addEventListener("keydown", function(event) {
+    function checkGuessOnEnter(event) {
         if (event.key === "Enter") {
-            checkGuessBtn.click();
+            checkGuess();
         }
-    });
-
-    restartBtn.addEventListener("click", restartGame);
+    }
 
     function restartGame() {
         attempts = 0;
         guessedNumbers.length = 0;
         gameMessage.textContent = "";
-        userGuessInput.disabled = false;
-        checkGuessBtn.disabled = false;
+        enableInputs();
         guessList.textContent = "";
         attemptsSpan.textContent = attempts;
         userGuessInput.value = "";
-        secretNumber = Math.floor(Math.random() * 100) + 1;
-        restartBtn.disabled = true; // Disable restart button
+        startGame();
     }
 
     function addGuessToList(guess) {
@@ -77,17 +76,31 @@ function myGameLogic() {
         arrow.classList.add("arrow");
 
         if (guess < secretNumber) {
-            arrow.textContent = "⬆️ - Higher"; // Up arrow
+            arrow.textContent = " ⬆️ - Higher"; // Up arrow
+        } else if (guess > secretNumber) {
+            arrow.textContent = " ⬇️ - Lower"; // Down arrow
         } else {
-            arrow.textContent = "⬇️ - Lower"; // Down arrow
+            arrow.textContent = " - Correct"; // Display "Correct" when the final number is guessed
         }
 
         guessItem.appendChild(arrow);
-        // Insert the new guess at the beginning of the list
         guessList.insertBefore(guessItem, guessList.firstChild);
-        // Center the guesses in the middle
         guessList.style.textAlign = "center";
     }
+
+    function disableInputs() {
+        userGuessInput.disabled = true;
+        checkGuessBtn.disabled = true;
+        restartBtn.disabled = false;
+    }
+
+    function enableInputs() {
+        userGuessInput.disabled = false;
+        checkGuessBtn.disabled = false;
+        restartBtn.disabled = true;
+    }
+
+    startGame();
 }
 
 document.addEventListener("DOMContentLoaded", myGameLogic);
