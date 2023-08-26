@@ -17,6 +17,7 @@ body {
     max-width: 400px;
     margin: 0 auto;
 }
+
   
   h1 {
     color: #333;
@@ -36,7 +37,7 @@ body {
   button {
     padding: 10px 20px;
     margin: 5px;
-    background-color: #00a6ed;
+    background-color: #29274c;
     color: white;
     font-weight: bold;
     border: none;
@@ -47,7 +48,7 @@ body {
   }
   
   button:hover {
-    background-color: #00a6edcd;
+    background-color: #1e1c44;
     font-weight: bold;
   }
   
@@ -85,11 +86,11 @@ body {
 }
 
 li.higher {
-  background-color: #00a6ed;
-  color: white;
+  background-color: #94e39e;
+  color: #262626
 }
 
 li.lower {
-  background-color: #00a6ed;
-  color: white;
+  background-color: #e39494;
+  color: #262626;
 }
