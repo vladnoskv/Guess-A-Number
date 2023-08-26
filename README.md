@@ -5,7 +5,7 @@ This is a simple web-based game where the player has to guess a secret number be
 ## Image Screenshots
 
 1. Start <br>
- ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/08075953-2d71-47a3-ba50-04a24d11dbb6)
+ ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/a05f2650-f650-4b94-9999-93520ddd3baf)
 
 2. You Guessed Successfully <br>
    ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/8de8ccd9-f778-41bc-ae85-9dce695a09e1)
