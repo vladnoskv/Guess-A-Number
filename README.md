@@ -29,6 +29,7 @@ This is a simple web-based game where the player has to guess a secret number be
 12. Each guess in the list will be accompanied by an arrow indicating whether the actual number is higher or lower.
 13. Restart Button: After the game ends (either by guessing correctly or reaching the maximum attempts), the player can click the "Restart" button to start a new game.
 14. This will reset all game variables and enable the guess input and check button.
+15. Guesses cleared automatically after each guess.
 
 ## How to Play
 
