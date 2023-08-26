@@ -5,13 +5,13 @@ This is a simple web-based game where the player has to guess a secret number be
 ## Image Screenshots
 
 1. Start <br>
-   ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/11a26d54-0d62-4746-adb8-035c5d4dd07a)
+ ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/08075953-2d71-47a3-ba50-04a24d11dbb6)
 
 2. You Guessed Successfully <br>
-   ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/d82dfe7e-cdf7-4474-9199-94e29d1ce226)
+   ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/8de8ccd9-f778-41bc-ae85-9dce695a09e1)
 
 3. You Failed! <br>
-   ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/98ce5f4c-3f6c-4166-8648-9f049531039d)
+   ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/799da2bd-a71b-4182-879d-dbb8e33325a1)
 
 ## Features
 
