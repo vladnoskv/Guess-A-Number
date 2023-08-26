@@ -1,6 +1,13 @@
 # Guess the Number Game
 
 This is a simple web-based game where the player has to guess a secret number between 1 and 100. The player can make up to 10 attempts to guess the correct number.
+## Image Screenshots
+1.
+![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/11a26d54-0d62-4746-adb8-035c5d4dd07a)
+2.
+![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/5a8bb7b5-2067-437e-968b-40176aaf1c38)
+3.
+![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/096ce0e9-ee48-40f4-bf77-cd88a7801c53)
 
 ## How to Play
 
