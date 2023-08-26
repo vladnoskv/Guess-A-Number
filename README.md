@@ -8,7 +8,7 @@ This is a simple web-based game where the player has to guess a secret number be
    ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/11a26d54-0d62-4746-adb8-035c5d4dd07a)
 
 2. You Guessed Successfully <br>
-   ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/5560d630-e32a-443f-808c-a1a331053241)
+   ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/d82dfe7e-cdf7-4474-9199-94e29d1ce226)
 
 3. You Failed! <br>
    ![image](https://github.com/vladnoskv/Guess-A-Number/assets/96758655/98ce5f4c-3f6c-4166-8648-9f049531039d)
@@ -23,7 +23,7 @@ This is a simple web-based game where the player has to guess a secret number be
 6. If the guess is lower than the secret number, a message will be shown asking the player to try a higher number.
 7. If the guess is higher than the secret number, a message will be shown asking the player to try a lower number.
 8. If the guess is correct, a congratulations message will be shown with the number of attempts taken.
-9. If the player exceeds the maximum number of attempts, a game over message will be shown with the secret number.
+9. If the player exceeds the maximum number of attempts, a game-over message will be shown with the secret number.
 10. Attempts Counter: The game will keep track of the number of attempts made by the player.
 11. Guessed Numbers List: The game will display a list of all the guessed numbers.
 12. Each guess in the list will be accompanied by an arrow indicating whether the actual number is higher or lower.
