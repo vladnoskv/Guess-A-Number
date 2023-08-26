@@ -12,10 +12,12 @@ body {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 25px;
     text-align: center;
-  }
-
+    max-width: 400px;
+    margin: 0 auto;
+}
+  
   h1 {
     color: #333;
     margin-top: 0;
@@ -26,21 +28,27 @@ body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
   }
-  
+
   button {
     padding: 10px 20px;
-    background-color: #333;
+    margin: 5px;
+    background-color: #00a6ed;
     color: white;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    width: 100%;
   }
   
   button:hover {
-    background-color: #555;
+    background-color: #00a6edcd;
+    font-weight: bold;
   }
   
   p#message {
@@ -67,13 +75,21 @@ body {
   }
   
   li {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: inline-block;
-    background-color: #eaeaea;
-    border-radius: 15px;
-    padding: 5px 10px;
-    margin-right: 10px;
-  }
-  
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: inline-block;
+  border-radius: 15px;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+li.higher {
+  background-color: #00a6ed;
+  color: white;
+}
+
+li.lower {
+  background-color: #00a6ed;
+  color: white;
+}
