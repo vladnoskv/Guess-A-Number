@@ -2,29 +2,38 @@
 /*
 Plugin Name: Number Guesser Plugin
 Description: A number guessing game plugin.
-Version: 1.1
+Version: 1.3
 Author: Vlad Noskov
 Author URI: https://vladnoskov.com
 */
 
-function number_guesser_shortcode() {
-    ob_start(); ?>
+// Enqueue your own stylesheet and script files
+function number_guesser_enqueue_scripts() {
+    wp_enqueue_style( 'number_guesser_styles', plugins_url( 'styles.css', __FILE__ ) );
+    wp_enqueue_script( 'number_guesser_script', plugins_url( 'script.js', __FILE__ ) );
+}
+add_action( 'wp_enqueue_scripts', 'number_guesser_enqueue_scripts' );
 
-    <div id="game">
-        <h2>Number Guesser Game</h2>
-        <p>Guess a number between 1 and 100:</p>
-        <input type="number" id="guess">
-        <button type="button" id="checkBtn">Check</button>
+// Wrap your code in a unique container
+function display_game_func() {
+    ob_start();
+    ?>
+    <div id="game-container">
+        <h1>Guess the Number Game</h1>
+        <p>Try to guess the secret number between 1 and 100.</p>
+        <p><b>Can you do it?</b></p>
+        <input type="number" id="guess" placeholder="Enter your guess">
+        <button id="checkBtn">Guess Number</button>
+        <button id="restartBtn">Try Again</button>
         <p id="message"></p>
-        <ul id="guessList"></ul>
-        <p>Attempts: <span id="attempts">0</span></p>
-        <button type="button" id="restartBtn" style="display: none;">Restart</button>
+        <p><b>Attempts :</b> <span id="attempts">0</span>/10</p>
+        <div class="guesses">
+            <p><b>Previous Guesses:</b></p>
+            <ul id="guessList"></ul>
+        </div>
     </div>
-
-    <script src="<?php echo plugins_url( 'script.js', __FILE__ ); ?>"></script>
-
     <?php
     return ob_get_clean();
 }
 
-add_shortcode( 'number_guesser', 'number_guesser_shortcode' );
+add_shortcode( 'display_game', 'display_game_func' );
