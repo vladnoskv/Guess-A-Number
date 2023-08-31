@@ -6,9 +6,9 @@ body {
     align-items: center;
     min-height: 100vh;
     background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
-  }
-  
-  .container {
+}
+
+.container {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -18,13 +18,12 @@ body {
     margin: 0 auto;
 }
 
-  
-  h1 {
-    color: #333;
+h1 {
+    color: #29274c;
     margin-top: 0;
-  }
-  
-  input[type="number"] {
+}
+
+input[type="number"] {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -32,9 +31,9 @@ body {
     margin: 10px 0;
     width: 100%;
     box-sizing: border-box;
-  }
+}
 
-  button {
+button {
     padding: 10px 20px;
     margin: 5px;
     background-color: #29274c;
@@ -45,52 +44,90 @@ body {
     cursor: pointer;
     transition: background-color 0.2s;
     width: 100%;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #1e1c44;
     font-weight: bold;
-  }
-  
-  p#message {
+}
+
+p#message {
     margin-top: 15px;
     font-size: 20px;
     font-weight: bold;
-  }
-  
-  p {
+}
+
+p {
     margin-bottom: 5px;
-  }
-  
-  .guesses {
+    color: #29274c;
+}
+
+.guesses {
     margin-top: 20px;
     border-top: 1px solid #ccc;
     padding-top: 10px;
-  }
-  
-  ul {
+}
+
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: left;
-  }
-  
-  li {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  display: inline-block;
-  border-radius: 15px;
-  padding: 5px 10px;
-  margin-right: 10px;
+}
+
+li {
+    border: 2px solid #29274c;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #f6f6f6;
+    color: #1e1e1e;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 li.higher {
-  background-color: #94e39e;
-  color: #262626
+    background-color: #bbf4c3;
+    color: #29274c;
+    border: 2px solid #29274c;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
 }
 
 li.lower {
-  background-color: #e39494;
-  color: #262626;
+    background-color: #f4bbbb;
+    color: #29274c;
+    border: 2px solid #29274c;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+#game-container ul li:before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+#game-container ul li.correct:before {
+    content: "↑";
+    color: green;
+}
+
+#game-container ul li.too-high:before {
+    content: "↓";
+    color: red;
+}
+
+#game-container ul li.too-low:before {
+    content: "↑";
+    color: red;
 }
