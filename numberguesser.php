@@ -2,7 +2,7 @@
 /*
 Plugin Name: Number Guesser Plugin
 Description: A number guessing game plugin.
-Version: 1.8
+Version: 1.9
 Author: Vlad Noskov
 Author URI: https://vladnoskov.com
 */
