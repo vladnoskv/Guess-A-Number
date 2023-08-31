@@ -2,7 +2,7 @@
 /*
 Plugin Name: Number Guesser Plugin
 Description: A number guessing game plugin.
-Version: 1.4
+Version: 1.5
 Author: Vlad Noskov
 Author URI: https://vladnoskov.com
 */
@@ -19,9 +19,9 @@ function display_game_func() {
     ob_start();
     ?>
     <div id="game-container">
-        <h1>Guess the Number Game</h1>
-        <p>Try to guess the secret number between 1 and 100.</p>
-        <p><b>Can you do it?</b></p>
+        <h1 style="color: #29274c;">Guess the Number Game</h1>
+        <p style="color: #29274c;">Try to guess the secret number between 1 and 100.</p>
+        =<p><b>Can you do it?</b></p>
         <input type="number" id="guess" placeholder="Enter your guess">
         <button id="checkBtn">Guess Number</button>
         <button id="restartBtn">Try Again</button>
