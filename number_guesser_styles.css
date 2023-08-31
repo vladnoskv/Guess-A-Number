@@ -1,12 +1,17 @@
+/* Reset default browser margins */
 .game-container body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
-  }
+  margin: 0;
+}
+
+/* Apply the background gradient to the body */
+.game-container body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
+}
   
 .game-container .container {
     background-color: #fff;

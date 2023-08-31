@@ -2,7 +2,7 @@
 /*
 Plugin Name: Number Guesser Plugin
 Description: A number guessing game plugin.
-Version: 2.3
+Version: 2.5
 Author: Vlad Noskov
 Author URI: https://vladnoskov.com
 */
@@ -12,7 +12,6 @@ function number_guesser_enqueue_scripts() {
     wp_enqueue_script( 'number_guesser_script', plugin_dir_url( __FILE__ ) . '/number_guesser_script.js', array(), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'number_guesser_enqueue_scripts' );
-
 
 // Wrap your code in a unique container
 function display_game_func() {
