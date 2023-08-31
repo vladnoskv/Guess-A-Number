@@ -1,4 +1,4 @@
-body {
+.game-container body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     display: flex;
@@ -8,7 +8,7 @@ body {
     background: linear-gradient(to bottom right, #0f0c29, #302b63, #24243e);
   }
   
-  .container {
+  .game-container container {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -19,12 +19,12 @@ body {
 }
 
   
-  h1 {
+.game-container h1 {
     color:#29274c;;
     margin-top: 0;
   }
   
-  input[type="number"] {
+  .game-container input[type="number"] {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -34,7 +34,7 @@ body {
     box-sizing: border-box;
   }
 
-  button {
+  .game-container button {
     padding: 10px 20px;
     margin: 5px;
     background-color: #29274c;
@@ -47,36 +47,36 @@ body {
     width: 100%;
   }
   
-  button:hover {
+  .game-container button:hover {
     background-color: #1e1c44;
     font-weight: bold;
   }
   
-  p#message {
+  .game-container p#message {
     margin-top: 15px;
     font-size: 20px;
     font-weight: bold;
   }
   
-  p {
+  .game-container p {
     margin-bottom: 5px;
     color: #29274c;
   }
   
-  .guesses {
+  .game-container .guesses {
     margin-top: 20px;
     border-top: 1px solid #ccc;
     padding-top: 10px;
   }
   
-  ul {
+  .game-container ul {
     list-style: none;
     padding: 0;
     margin: 0;
     text-align: left;
   }
   
-li {
+  .game-container li {
   border: 2px solid #29274c;
   font-size: 18px;
   font-weight: bold;
@@ -90,7 +90,7 @@ li {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-li.higher {
+.game-container li.higher {
   background-color: #bbf4c3;
   color: #29274c;
   border: 2px solid #29274c;
@@ -99,7 +99,7 @@ li.higher {
   margin-right: 10px;
 }
 
-li.lower {
+.game-container li.lower {
   background-color: #f4bbbb;
   color: #29274c;
   border: 2px solid #29274c;
