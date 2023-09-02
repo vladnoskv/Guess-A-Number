@@ -77,10 +77,11 @@ function myGameLogic() {
   function addGuessToList(guess) {
     const guessItem = document.createElement("li");
     guessItem.textContent = guess;
-
-    const arrow = document.createElement("span");
+    guessItem.style.listStyle = "none";
+  
+    arrow = document.createElement("span");
     arrow.classList.add("arrow");
-
+  
     if (guess < secretNumber) {
       guessItem.classList.add("higher");
       arrow.innerHTML = " &#8593;"; // Up arrow
@@ -90,12 +91,11 @@ function myGameLogic() {
     } else {
       arrow.innerHTML = " &#10004;"; // Display a checkmark when the final number is guessed
     }
-
-    arrow.style.color = "#29274c;"; // Set the color of the arrow to #29274c
-    arrow.style.borderWidth = "2px"; // Set the thickness of the arrow's border to 2px
-
+  
+    arrow.style.color = "#29274c"; // Set the color of the arrow to #29274c
+  
     guessItem.appendChild(arrow);
-    guessList.insertBefore(guessItem, guessList.firstChild);
+    guessList.appendChild(guessItem); // Append the guess item to the end of the list
     guessList.style.textAlign = "center";
   }
 
